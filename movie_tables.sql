@@ -36,3 +36,6 @@ CREATE TABLE favorite (
     movie_id INT NOT NULL,
     Foreign Key (movie_id) REFERENCES movie(movie_id)
 );
+
+--test code--
+select * from movie;
