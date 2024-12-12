@@ -11,7 +11,7 @@ CREATE TABLE movie (
     Foreign Key (genre_id) REFERENCES genre(genre_id)
 );
 
-CREATE TABLE "user" (
+CREATE TABLE users (
     user_id INT PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
     username VARCHAR(50) NOT NULL UNIQUE,
@@ -38,4 +38,4 @@ CREATE TABLE favorite (
 );
 
 --test code--
-select * from movie;
+select * from users;
