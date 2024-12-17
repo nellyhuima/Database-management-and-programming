@@ -37,5 +37,41 @@ CREATE TABLE favorite (
     Foreign Key (movie_id) REFERENCES movie(movie_id)
 );
 
---test code--
-select * from users;
+--test data for genre--
+INSERT INTO genre (genre_id, genre_name)
+VALUES
+    (1, 'Drama'),
+    (2, 'Comedy'),
+    (3, 'Sci-Fi'),
+    (4, 'Fantasy'),
+    (5, 'Action'),
+    (6, 'Thriller');
+
+--test data for movies--
+INSERT INTO movie (movie_id, movie_name, publishing_year, genre_id)
+VALUES
+    (1, 'Inception', 2010, 5),
+    (2, 'The Terminator', 1984, 5),
+    (3, 'Tropic Thunder', 2008, 2),
+    (4, 'Borat', 2006, 2),
+    (5, 'Interstellar', 2014, 1),
+    (6, 'Joker', 2019, 1);
+
+--test data for users--
+INSERT INTO users (user_id, name, username, password, year_of_birth)
+VALUES
+    (1, 'Reima Riihimäki', 'reimarii', 'qwerty123', 1986),
+    (2, 'Lisa Simpson', 'lizzy', 'abcdef', 1991),
+    (3, 'Ben Bossy', 'boss', 'salasana', 1981);
+
+--test data for reviews--
+INSERT INTO review (user_id, movie_id, stars, review_text)
+VALUES
+    (1, 1, 5, 'Amazing movie!'),
+    (2, 3, 4, 'A very inspirational movie.');
+
+--test data for favorites--
+INSERT INTO favorite (user_id, movie_id)
+VALUES
+    (1, 1),
+    (2, 2);
